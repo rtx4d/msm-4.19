@@ -457,4 +457,9 @@ config MACH_XIAOMI_E10
         help
           Support for Xiaomi Poco F1 (beryllium)
 
+config MACH_XIAOMI_E5
+        bool "E5 board"
+        select MACH_XIAOMI_SDM845
+        help
+          Support for Xiaomi Mi Mix 3 (perseus)
 endmenu
