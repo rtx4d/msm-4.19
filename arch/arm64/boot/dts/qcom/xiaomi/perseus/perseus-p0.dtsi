@@ -151,14 +151,14 @@
 
 &mdss_mdp {
 	#cooling-cells = <2>;
-	connectors = <&sde_rscc &sde_wb>;
+	connectors = <&sde_rscc &sde_wb &sde_dsi>;
 };
 
 &labibb {
 	status = "disabled";
 };
 
-&dsi_samsung_fhd_ea8076_cmd {
+&dsi_samsung_fhd_ea8076_cmd_display {
 	qcom,panel-supply-entries = <&dsi_amoled_samsung_ea8076_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <2>;
@@ -167,7 +167,7 @@
 	qcom,platform-te-gpio = <&tlmm 10 0>;
 };
 
-&dsi_visionox_fhd_r66455_cmd {
+&dsi_visionox_fhd_r66455_cmd_display {
 	qcom,panel-supply-entries = <&dsi_amoled_visionox_r66455_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <256>;
@@ -177,17 +177,13 @@
 	qcom,platform-te-gpio = <&tlmm 10 0>;
 };
 
-&dsi_visionox_fhd_r66455_vid {
+&dsi_visionox_fhd_r66455_vid_display {
 	qcom,panel-supply-entries = <&dsi_amoled_visionox_r66455_panel_pwr_supply>;
 	qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 	qcom,mdss-dsi-bl-min-level = <2>;
 	qcom,mdss-dsi-bl-max-level = <4095>;
 	qcom,platform-reset-gpio = <&tlmm 6 0>;
 	qcom,platform-te-gpio = <&tlmm 10 0>;
-};
-
-&dsi_samsung_fhd_ea8076_cmd_display {
-	qcom,dsi-display-active;
 };
 
 &dsi_sim_vid {
